@@ -7,7 +7,7 @@
 <body>
 	<div class="pagepart startscreen"></div>
 	<div class="pagepart"></div>
-	<div class="pagepart"></div>
+	<div class="pagepart blue"></div>
 	<div class="pagepart"></div>
 </body>
 </html>
