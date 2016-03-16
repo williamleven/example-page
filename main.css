@@ -6,3 +6,7 @@
 body {
 	margin: 0px;
 }
+.startscreen{
+	background-image: url('background.jpg');
+    background-size: 100% 100%;
+}
