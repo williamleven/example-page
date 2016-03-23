@@ -5,11 +5,13 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<div class="pagepart startscreen">
+	<div class="pagepart startscreen centercontainer flexvertical">
 		<h1>Välkommen till min sida</h1>
-		<div class="sitelink"></div>
-		<div class="sitelink"></div>
-		<div class="sitelink"></div>
+		<div class="centercontainer">
+			<div class="sitelink"></div>
+			<div class="sitelink"></div>
+			<div class="sitelink"></div>
+		</div>
 		<p>Klicka på en av rutorna eller scrolla ned för att se mer!</p>
 	</div>
 	<div class="pagepart"></div>
