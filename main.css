@@ -22,6 +22,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
 }
 .flexvertical{
 	flex-direction: column;
