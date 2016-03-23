@@ -12,3 +12,9 @@ body {
 .blue{
 	background-color: blue;
 }
+.sitelink{
+	background-color: white;
+	border: 1px solid black;
+	width: 100px;
+	height: 100px;
+}
