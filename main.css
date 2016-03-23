@@ -7,7 +7,7 @@ body {
 }
 .startscreen{
 	background-image: url('background.jpg');
-    background-size: 100% 100%;
+    background-size: cover;
 }
 .blue{
 	background-color: blue;
