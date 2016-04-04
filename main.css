@@ -4,26 +4,38 @@
 }
 body {
 	margin: 0px;
+	font-size: 200%;
 }
 .startscreen{
 	background-image: url('background.jpg');
     background-size: cover;
 }
 .blue{
-	background-color: blue;
+	background-color: #89A8B3;
 }
-.sitelink{
-	background-color: white;
-	border: 1px solid black;
-	width: 100px;
-	height: 100px;
+.sitelinkimages:before{
+	font-size: 175px;
+	color: rgba(255, 255, 255, 0.9);
+	margin: 25px;
 }
-.centercontainer{
+a{
+	text-decoration: none;
+}
+.centercontent{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.centercontent-dynamicrows{
 	flex-wrap: wrap;
 }
-.flexvertical{
+.centercontent-vertical{
 	flex-direction: column;
+}
+.whitetext{
+	color: white;
+}
+.anchor{
+	position: relative;
+	top: 29px;
 }
