@@ -1,41 +1,125 @@
+/* Minimum height for page content-parts */
 .pagepart {
-	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 }
+
+/* White border fix */
 body {
 	margin: 0px;
-	font-size: 200%;
 }
+
+/* Backgroudn for startpage */
 .startscreen{
 	background-image: url('background.jpg');
     background-size: cover;
 }
+
+/* Mah nice blue background color */
 .blue{
 	background-color: #89A8B3;
 }
+
+/* Styling of sitelinks */
 .sitelinkimages:before{
 	font-size: 175px;
-	color: rgba(255, 255, 255, 0.9);
+	color: rgba(255, 255, 255, 0.8);
 	margin: 25px;
 }
-a{
+
+/* Makes element pop on hover */
+.popelement{
 	text-decoration: none;
+	transition: 0.3s ease;
 }
+.popelement:hover{
+	transform: scale(1.5, 1.5);
+}
+
+/* Flexboxes*/
 .centercontent{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+/* Allows rows to wrap*/
 .centercontent-dynamicrows{
 	flex-wrap: wrap;
 }
+/* Changes direction of flex*/
 .centercontent-vertical{
 	flex-direction: column;
 }
+
+/* Text color white */
 .whitetext{
 	color: white;
 }
+
+/* Position fix for anchors */
 .anchor{
 	position: relative;
-	top: 29px;
+	top: 30px;
+}
+
+/* Aligns text to center*/
+.centertext{
+	text-align: center;
+}
+
+/* Devides text in a three-collumn layout */
+.collumns{
+	-webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+
+    -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+    -moz-column-rule-style: solid; /* Firefox */
+    column-rule-style: solid;
+
+    -webkit-column-rule-color: #89A8B3; /* Chrome, Safari, Opera */
+    -moz-column-rule-color: #89A8B3; /* Firefox */
+    column-rule-color: #89A8B3;
+
+    -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+    -moz-column-rule-width: 1px; /* Firefox */
+    column-rule-width: 1px;
+
+    margin: 20px;
+}
+
+.portfolioobject{
+	width: 200px;
+	height: 200px;
+	border: 2px solid black;
+	margin: 25px;
+
+}
+
+.button{
+	border: none;
+	text-align: center;
+	background-color: #89A8B3;
+	padding: 15px 32px;
+	font-size: 16px;
+	width: 100%;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.formfield{
+	width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    resize: none;
+}
+
+form{
+	width: 60%;
+	min-width: 300px;
+	max-width: 800px;
 }
