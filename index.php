@@ -30,16 +30,22 @@
 	<div class="pagepart blue centercontent centercontent-vertical whitetext">
 		<h2>Portfolio</h1>
 		<div class="centercontent centercontent-dynamicrows">
-			<div class="portfolioobject"></div>
-			<div class="portfolioobject"></div>
-			<div class="portfolioobject"></div>
-			<div class="portfolioobject"></div>
-			<div class="portfolioobject"></div>
-			<div class="portfolioobject"></div>
-			<div class="portfolioobject"></div>
-			<div class="portfolioobject"></div>
-			<div class="portfolioobject"></div>
-			<div class="portfolioobject"></div>
+			<div class="portfolioobject">
+				<img class="portfolioimage" src="">
+				<h3 class="portfoliotitle" >CV</h3>
+			</div>
+			<div class="portfolioobject">
+				<img class="portfolioimage" src="portfolioimages/LMS.jpg">
+				<h3 class="portfoliotitle" >easyLMS</h3>
+			</div>
+			<div class="portfolioobject">
+				<img class="portfolioimage" src="">
+				<h3 class="portfoliotitle" >Kodstuga</h3>
+			</div>
+			<div class="portfolioobject">
+				<img class="portfolioimage" src="">
+				<h3 class="portfoliotitle" >Kvällskurser</h3>
+			</div>
 		</div>
 	</div>
 	<a name="three" class="anchor"></a>
