@@ -4,6 +4,10 @@
 	<title>Min Webbsida</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link rel="stylesheet" type="text/css" href="genericons/genericons.css">
+
+	<!--JS for hidden divs-->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script type="text/javascript" src="hiddenDiv.js"></script>
 </head>
 <body>
 	<div class="pagepart startscreen centercontent centercontent-vertical whitetext">
@@ -30,19 +34,19 @@
 	<div class="pagepart blue centercontent centercontent-vertical whitetext">
 		<h2>Portfolio</h1>
 		<div class="centercontent centercontent-dynamicrows">
-			<div class="portfolioobject">
+			<div class="portfolioobject" onclick="openHiddenDiv('1')">
 				<img class="portfolioimage" src="portfolioimages/CV.png">
 				<h3 class="portfoliotitle" >CV</h3>
 			</div>
-			<div class="portfolioobject">
+			<div class="portfolioobject" onclick="openHiddenDiv('2')">
 				<img class="portfolioimage" src="portfolioimages/LMS.jpg">
 				<h3 class="portfoliotitle" >easyLMS</h3>
 			</div>
-			<div class="portfolioobject">
+			<div class="portfolioobject" onclick="openHiddenDiv('3')">
 				<img class="portfolioimage" src="portfolioimages/kodstuga.png">
 				<h3 class="portfoliotitle" >Kodstuga</h3>
 			</div>
-			<div class="portfolioobject">
+			<div class="portfolioobject" onclick="openHiddenDiv('4')">
 				<img class="portfolioimage" src="portfolioimages/kvallskurs.png">
 				<h3 class="portfoliotitle" >Kvällskurser</h3>
 			</div>
@@ -51,7 +55,7 @@
 	<a name="three" class="anchor"></a>
 	<div class="pagepart centercontent centercontent-vertical">
 		<h2>Kontakta mig</h1>
-		<form>
+		<form action="contact.php" method="post">
 			<input class="formfield" type="text" name="name" placeholder="Namn"><br>
 			<br>
 			<input class="formfield" type="text" name="email" placeholder="E-post"><br>
@@ -61,5 +65,59 @@
 			<input class="button" type="submit">
 		</form>
 	</div>
+
+	<!-- Hidden divs -->
+	<div id="hidden-div-background">
+		<div id="hidden-div-wrapper">
+			<div class="hidden-div-div" id="hidden-div-1">
+				<p><img class="portfolioimage wrap-text" src="portfolioimages/CV.png">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<a target="_blank" href="">Mitt projekt</a>
+			</div>
+			<div class="hidden-div-div" id="hidden-div-2">
+				<p><img class="portfolioimage wrap-text" src="portfolioimages/LMS.jpg">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<a target="_blank" href="">Mitt projekt</a>
+			</div>
+			<div class="hidden-div-div" id="hidden-div-3">
+				<p><img class="portfolioimage wrap-text" src="portfolioimages/kodstuga.png">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<a target="_blank" href="">Mitt projekt</a>
+			</div>
+			<div class="hidden-div-div" id="hidden-div-4">
+				<p><img class="portfolioimage wrap-text" src="portfolioimages/kvallskurs.png">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<a target="_blank" href="">Mitt projekt</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Display errors -->
+	<script type="text/javascript">
+		<?php
+			if (isset($_GET['error'])) {
+				if (!empty($_GET['error'])) {
+					$error = $_GET['error'];
+					echo "alert('".$error."');";
+				}
+			}
+		?>
+	</script>
 </body>
 </html>

@@ -132,3 +132,39 @@ form{
 	min-width: 300px;
 	max-width: 800px;
 }
+
+/* Hidden divs*/
+#hidden-div-background{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+#hidden-div-background:before {
+  content: '';
+  display: inline-block;
+  height: 100%; 
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+#hidden-div-wrapper{ 
+  display: inline-block;
+  vertical-align: middle;
+}
+.hidden-div-div{
+  max-height: 80vh;
+  background-color: white;
+  text-align: left;
+  padding: 10px;
+  overflow: auto;
+  max-width: 80%;
+  margin: auto;
+}
+
+/* Wrap text aroudn images */
+.wrap-text{
+	float: left;
+}
