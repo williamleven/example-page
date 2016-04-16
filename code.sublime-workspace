@@ -87,39 +87,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "index.php",
-			"settings":
-			{
-				"buffer_size": 7766,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "contact.php",
-			"settings":
-			{
-				"buffer_size": 917,
-				"line_ending": "Windows",
-				"name": "hello"
-			}
-		},
-		{
-			"file": "main.css",
-			"settings":
-			{
-				"buffer_size": 3057,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "hiddenDiv.js",
-			"settings":
-			{
-				"buffer_size": 857,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -157,6 +124,11 @@
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/example-page/index.php",
+		"/C/xampp/htdocs/example-page/contact.php",
+		"/C/xampp/htdocs/example-page/main.css",
+		"/C/xampp/htdocs/example-page/hiddenDiv.js",
+		"/C/Users/gurgy/AppData/Local/Temp/Rar$DIa0.325/contactthanks.php",
 		"/C/Users/gurgy/AppData/Local/Temp/Rar$DIa0.813/contactengine.php",
 		"/E/Nytt textdokument.txt",
 		"/C/Users/gurgy/Desktop/Nytt textdokument.txt",
@@ -235,125 +207,8 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "index.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7766,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4658,
-								4665
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1026.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "contact.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 917,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								868,
-								868
-							]
-						],
-						"settings":
-						{
-							"auto_name": "hello",
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "main.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3057,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2790,
-								2790
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2385.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "hiddenDiv.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 857,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								465,
-								465
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
