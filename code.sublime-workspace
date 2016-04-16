@@ -3,6 +3,46 @@
 	{
 		"selected_items":
 		[
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"t",
+				"type	Attr"
+			],
+			[
+				"c",
+				"class	Attr"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"fon",
+				"font-size"
+			]
 		]
 	},
 	"buffers":
@@ -11,7 +51,15 @@
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 1175,
+				"buffer_size": 4377,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "main.css",
+			"settings":
+			{
+				"buffer_size": 2252,
 				"line_ending": "Windows"
 			}
 		}
@@ -52,6 +100,7 @@
 	],
 	"file_history":
 	[
+		"/E/Nytt textdokument.txt",
 		"/C/Users/gurgy/Desktop/Nytt textdokument.txt",
 		"/C/eula.1028.txt",
 		"/C/Users/gurgy/AppData/Local/Temp/fz3temp-1/8590e512-2fbe-4508-924e-39a3735ec37d.yml",
@@ -95,7 +144,7 @@
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
@@ -127,7 +176,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -136,15 +185,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1175,
+						"buffer_size": 4377,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								3534,
+								3534
 							]
 						],
 						"settings":
@@ -152,7 +201,36 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2252,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1805,
+								1805
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1242.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -163,7 +241,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -200,7 +278,7 @@
 	"project": "code.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":

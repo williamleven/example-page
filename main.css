@@ -91,18 +91,25 @@ body {
     margin: 20px;
 }
 
+/* Stylig the portfolio */
 .portfolioobject{
 	margin: 25px;
+	border: 2px solid white;
 
 }
 .portfolioimage{
-	width: 200px;
-
+	max-width: 200px;
+	max-height: 150px;
+	background-color: white;
 }
 .portfoliotitle{
 	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 4px;
+
 }
 
+/* Styling the contact form */
 .button{
 	border: none;
 	text-align: center;
@@ -113,7 +120,6 @@ body {
     margin: 8px 0;
     box-sizing: border-box;
 }
-
 .formfield{
 	width: 100%;
     padding: 12px 20px;
@@ -121,7 +127,6 @@ body {
     box-sizing: border-box;
     resize: none;
 }
-
 form{
 	width: 60%;
 	min-width: 300px;

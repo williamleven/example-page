@@ -31,7 +31,7 @@
 		<h2>Portfolio</h1>
 		<div class="centercontent centercontent-dynamicrows">
 			<div class="portfolioobject">
-				<img class="portfolioimage" src="">
+				<img class="portfolioimage" src="portfolioimages/CV.png">
 				<h3 class="portfoliotitle" >CV</h3>
 			</div>
 			<div class="portfolioobject">
@@ -39,11 +39,11 @@
 				<h3 class="portfoliotitle" >easyLMS</h3>
 			</div>
 			<div class="portfolioobject">
-				<img class="portfolioimage" src="">
+				<img class="portfolioimage" src="portfolioimages/kodstuga.png">
 				<h3 class="portfoliotitle" >Kodstuga</h3>
 			</div>
 			<div class="portfolioobject">
-				<img class="portfolioimage" src="">
+				<img class="portfolioimage" src="portfolioimages/kvallskurs.png">
 				<h3 class="portfoliotitle" >Kvällskurser</h3>
 			</div>
 		</div>
