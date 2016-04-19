@@ -34,19 +34,19 @@
 	<div class="pagepart blue centercontent centercontent-vertical whitetext">
 		<h2>Portfolio</h1>
 		<div class="centercontent centercontent-dynamicrows">
-			<div class="portfolioobject" onclick="openHiddenDiv('1')">
+			<div class="portfolioobject popelement" onclick="openHiddenDiv('1')">
 				<img class="portfolioimage" src="portfolioimages/CV.png">
 				<h3 class="portfoliotitle" >CV</h3>
 			</div>
-			<div class="portfolioobject" onclick="openHiddenDiv('2')">
+			<div class="portfolioobject popelement" onclick="openHiddenDiv('2')">
 				<img class="portfolioimage" src="portfolioimages/LMS.jpg">
 				<h3 class="portfoliotitle" >easyLMS</h3>
 			</div>
-			<div class="portfolioobject" onclick="openHiddenDiv('3')">
+			<div class="portfolioobject popelement" onclick="openHiddenDiv('3')">
 				<img class="portfolioimage" src="portfolioimages/kodstuga.png">
 				<h3 class="portfoliotitle" >Kodstuga</h3>
 			</div>
-			<div class="portfolioobject" onclick="openHiddenDiv('4')">
+			<div class="portfolioobject popelement" onclick="openHiddenDiv('4')">
 				<img class="portfolioimage" src="portfolioimages/kvallskurs.png">
 				<h3 class="portfoliotitle" >Kvällskurser</h3>
 			</div>
