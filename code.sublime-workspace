@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"sess",
+				"session_start"
+			],
+			[
+				"glo",
+				"glob"
+			],
+			[
+				"user",
+				"userId"
+			],
+			[
+				"set",
+				"setcookie"
+			],
+			[
+				"pre",
+				"prevPage"
+			],
+			[
+				"esc",
+				"esc_url"
+			],
+			[
+				"mem",
+				"memberType"
+			],
+			[
+				"new",
+				"new_post"
+			],
+			[
+				"Me",
+				"MemberSecondName"
+			],
+			[
+				"M",
+				"MemberFirstName"
+			],
+			[
+				"S",
+				"Supportive"
+			],
+			[
+				"A",
+				"Active"
+			],
+			[
 				"e",
 				"errors"
 			],
@@ -87,6 +135,17 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "<?php\n/*\nPlugin Name: ICAC Members Utility\nVersion: 1.0.7\nDescription: Member Utility for ICAC WP site\nPlugin URI: http://www.wappo.se\nAuthor: William Leven\nAuthor URI: http://gurgy.me\n*/\n\n/* Keeping users out of file */\ndefined( 'ABSPATH' ) or die( 'No access!' );\n\n/* Loading all plugin requirements */\nforeach ( glob( plugin_dir_path( __FILE__ ) . \"includes/*.php\" ) as $file ) {\n    require_once $file;\n}\n\n/* Woocommerce admin bar fix */\n	add_filter('woocommerce_disable_admin_bar', '_wc_disable_admin_bar', 10, 1);\n	function _wc_disable_admin_bar($prevent_admin_access) {\n	    return false;\n	} \n	add_filter('woocommerce_prevent_admin_access', '_wc_prevent_admin_access', 10, 1);\n	function _wc_prevent_admin_access($prevent_admin_access) {\n	    return false;\n	}\n\n/* Adding css */\n	add_action(\"wp_enqueue_scripts\", \"icac_memberStylesheet\");\n	function icac_memberStylesheet()\n	{\n		wp_register_style('icac_members_style', plugins_url().'/icac_members_utility/assets/members.css' );\n		wp_enqueue_style('icac_members_style');	\n	}\n\n\n/* Showing custom fields on user editor (exept occupation field) */\nadd_action( 'show_user_profile', 'icac_user_profile_fields' );\nadd_action( 'edit_user_profile', 'icac_user_profile_fields' );\nfunction icac_user_profile_fields( $user ) {\n?>\n  <h3><?php _e(\"Member profile information\", \"blank\"); ?></h3>\n  <table class=\"form-table\">\n    <tr>\n      <th><label for=\"icac_organization\"><?php _e(\"Organization name\"); ?></label></th>\n      <td>\n        <input type=\"text\" name=\"icac_organization\" id=\"icac_organization\" class=\"regular-text\" \n            value=\"<?php echo esc_attr( get_the_author_meta( 'icac_organization', $user->ID ) ); ?>\" /><br />\n        <span class=\"description\"><?php _e(\"Please enter your organization name.\"); ?></span>\n    </td>\n    </tr>\n  </table>\n  <table class=\"form-table\">\n    <tr>\n      <th><label for=\"icac_logo\"><?php _e(\"Organization logo\"); ?></label></th>\n      <td>\n        <input type=\"file\" name=\"icac_logo\" id=\"icac_logo\" /><br />\n        <span class=\"description\"><?php _e(\"Upload new logo here.\"); ?></span><br>\n		<?php $logo = get_the_author_meta( 'icac_logo', $user->ID ); \n		if($logo) { \n			$logo = unserialize($logo); \n			if(is_array($logo) && array_key_exists(\"url\", $logo) && array_key_exists(\"file\", $logo) && file_exists($logo['file'])) {\n		?><img src=\"<?php echo $logo['url']; ?>\" />\n		<?php }} ?> \n    </td>\n    </tr>\n  </table><?php\n}\n/* Saving the custom fields (user editor)(exept occupation field) */\nadd_action( 'personal_options_update', 'icac_save_extra_user_profile_fields' );\nadd_action( 'edit_user_profile_update', 'icac_save_extra_user_profile_fields' );\nfunction icac_save_extra_user_profile_fields( $user_id ) {\n  if ( current_user_can( 'edit_user', $user_id ) ) {\n    update_user_meta( $user_id, 'icac_organization', $_POST['icac_organization'] );\n    $logo = icac_save_uploaded_logo();\n   	if(!is_wp_error($logo) && $logo)\n		update_user_meta( $user_id, 'icac_logo', $logo);\n  }\n  return true;\n}\n",
+			"file": "/C/Users/gurgy/Google Drive/jobb/Wappo/ICAC/icac_members_utility/icac_members_utility.php",
+			"file_size": 3069,
+			"file_write_time": 131123521480000000,
+			"settings":
+			{
+				"buffer_size": 2993,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -95,18 +154,23 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 0.0,
-		"last_filter": "",
+		"height": 392.0,
+		"last_filter": "pa",
 		"selected_items":
 		[
+			[
+				"pa",
+				"Package Control: Install Package"
+			]
 		],
-		"width": 0.0
+		"width": 512.0
 	},
 	"console":
 	{
-		"height": 0.0,
+		"height": 146.0,
 		"history":
 		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
 	},
 	"distraction_free":
@@ -124,7 +188,21 @@
 	],
 	"file_history":
 	[
+		"/C/Users/gurgy/Google Drive/jobb/Wappo/beamwallet/3 - Befintliga script/exceptions.js",
+		"/C/Users/gurgy/Google Drive/jobb/Wappo/beamwallet/3 - Befintliga script/controllers.js",
+		"/C/Users/gurgy/Google Drive/jobb/Wappo/beamwallet/3 - Befintliga script/directives.js",
+		"/C/Users/gurgy/Google Drive/jobb/Wappo/beamwallet/3 - Befintliga script/services.js",
+		"/C/Users/gurgy/Desktop/hh.txt",
+		"/C/Users/gurgy/Google Drive/jobb/Wappo/beamwallet/3 - Befintliga script/config.js",
+		"/C/Users/gurgy/Google Drive/jobb/Wappo/beamwallet/3 - Befintliga script/app.js",
+		"/C/Users/gurgy/AppData/Local/Temp/fz3temp-2/config.yml",
+		"/C/Users/gurgy/AppData/Local/Temp/fz3temp-2/worth.yml",
 		"/C/xampp/htdocs/example-page/index.php",
+		"/C/Users/gurgy/AppData/Local/Temp/Rar$DIa0.600/index.php",
+		"/C/xampp/htdocs/icac/wp/wp-content/plugins/icac_members_utility/icac_members_utility.php",
+		"/C/Users/gurgy/AppData/Local/Temp/Rar$DIa0.360/index.php",
+		"/C/Users/gurgy/AppData/Local/Temp/Rar$DIa0.393/visual-form-builder.php",
+		"/C/Users/gurgy/Desktop/sims 3/# Installation Guide.txt",
 		"/C/xampp/htdocs/example-page/contact.php",
 		"/C/xampp/htdocs/example-page/main.css",
 		"/C/xampp/htdocs/example-page/hiddenDiv.js",
@@ -188,6 +266,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"isMobile",
+			"openSignupPopup",
+			"fire",
+			"button",
 			";\n",
 			"cree"
 		],
@@ -207,8 +289,41 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/gurgy/Google Drive/jobb/Wappo/ICAC/icac_members_utility/icac_members_utility.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2993,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1031,
+								1031
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"synced": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 216.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -246,6 +361,10 @@
 	"output.find_results":
 	{
 		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 118.0
 	},
 	"pinned_build_system": "",
 	"project": "code.sublime-project",
